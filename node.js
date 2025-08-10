@@ -12,7 +12,7 @@ function updateStorage() {
 }
 
 createBtn.addEventListener("click", () => {
-    let inputBox = document.createElement("p");
+    let inputBox = document.createElement("P");
     let img = document.createElement("img");
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
@@ -25,7 +25,7 @@ notesContainer.addEventListener("click", function(e){
         e.target.parentElement.remove();
         updateStorage();
     }
-    else if (e.target.tagName === "p") {
+    else if (e.target.tagName === "P") {
         notes = document.querySelectorAll(".input-box")
         notes.forEach(nt => {
             nt.onkeyup = function(){
@@ -40,4 +40,5 @@ document.addEventListener("keydown", event => {
         document.execCommand("insertLineBreak");
         event.preventDefault();
     }
+
 })
