@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: white;
+    padding: 4% 5%;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: clamp(24px, 3vw, 35px);
+    font-weight: 600;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container h1 img {
+    width: clamp(40px, 6vw, 60px);
+}
+
+.container button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    color: white;
+    font-size: clamp(14px, 2vw, 16px);
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.container button img {
+    width: clamp(20px, 4vw, 25px);
+    margin-right: 8px;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.input-box img {
+    width: clamp(20px, 4vw, 25px);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/*  Mobile Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 5%;
+    }
+
+    .container h1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container button {
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    .input-box {
+        max-width: 100%;
+        min-height: 120px;
+    }
+}
+
+/*  Tablet Styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 6%;
+    }
+
+    .notes-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .input-box {
+        flex: 1 1 calc(50% - 20px);
+        min-height: 130px;
+    }
+}
